@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./assets/script.js"></script>
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <!-- start quiz button -->
+    <div class="start-btn"><button>Start Quiz</button></div>
+
+    <!-- quiz box -->
+    <div class="quiz-box">
+      <header>
+        <div class="title">Quiz Application</div>
+        <div class="timer">
+          <div class="timer-text">Time Left</div>
+          <div class="timer-sec">75</div>
+        </div>
+      </header>
+      <section>
+        <div class="que-text">
+          <span>Question 1?</span>
+        </div>
+        <div class="option-list">
+          <div class="option">
+            <span>answer 1</span>
+            <div class="icon tick"><i class="fas fas-check"></i></div>
+          </div>
+          <div class="option">
+            <span>answer 2</span>
+            <div class="icon cross"><i class="fas fas-times"></i></div>
+          </div>
+          <div class="option">
+            <span>answer 3</span>
+          </div>
+          <div class="option">
+            <span>answer 4</span>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="total-que">
+          <span
+            ><p>2</p>
+            of
+            <p>5</p>
+            Questions</span
+          >
+        </div>
+        <button class="next-btn">Next Question</button>
+      </footer>
+    </div>
+
+    <!-- quiz result box-->
+    <div class="result-box">
+      <div class="icon">
+        <i class="fas fa-crown"></i>
+      </div>
+      <div class="complete-text">You've completed the quiz!</div>
+      <div class="score-text">
+        <span>your score</span>
+      </div>
+      <div class="buttons">
+        <button class="compare">Compare Results</button>
+        <button class="restart">Restart Quiz</button>
+        <button class="quit">Quit Quiz</button>
+      </div>
+    </div>
+
+    <!-- compare results box -->
+    <div class="compare-results">
+      <div class="buttons">
+        <button class="restart">Restart Quiz</button>
+        <button class="quit">Quit Quiz</button>
+      </div>
+    </div>
+  </body>
+</html>

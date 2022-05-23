@@ -1,0 +1,14 @@
+.start-btn,
+.quiz-box,
+.result-box,
+.compare-results{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.quiz-box,
+.result-box,
+.compare-results{ 
+    display: none;
+}
