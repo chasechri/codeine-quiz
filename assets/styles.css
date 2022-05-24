@@ -18,6 +18,13 @@ body{
     transform: translate( -50%, -50%);
 }
 
+.quiz-box.activeQuiz{
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
 /*start quiz styling*/
 
 .start-btn button{
