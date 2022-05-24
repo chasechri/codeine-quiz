@@ -9,7 +9,9 @@ body{
 }
 
 .start-btn,
-.quiz-box{
+.quiz-box,
+.result-box,
+.compare-results{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -19,13 +21,17 @@ body{
 /*start quiz styling*/
 
 .start-btn button{
-    font-size: 50px;
+    font-size: 40px;
     padding: 30px 15px;
-    border: 3px solid;
+    border: 2px solid;
     border-color: black;
     border-radius: 5px;
     cursor: pointer;
-    background: rgb(199, 218, 212);
+    background: darkgray;
+}
+
+.start-btn button:hover{
+    background: gray;
 }
 
 .quiz-box{
@@ -33,9 +39,14 @@ body{
     background: whitesmoke;
     border-radius: 5px;
     border: 1px solid black;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
 }
 
 .quiz-box header{
+    position: relative;
+    z-index: 99;
     height: 70px;
     padding: 0 30px;
     background: whitesmoke;
@@ -55,9 +66,179 @@ body{
     align-content: center;
     justify-content: space-between;
     width: 145px;
-    height: 45px;
+    height: 35px;
     background: lightgray;
     border: 1px solid;
     border-radius: 5px;
-    padding: 14px 8px;
+    padding: 10px 8px;
 }
+
+.quiz-box header .timer .timer-text{
+    font-size: 15px;
+    user-select: none;
+}
+
+.quiz-box header .timer .timer-sec{
+    font-size: 16px;
+}
+
+.quiz-box section{
+    padding: 25px 30px 20px 30px;
+}
+
+.quiz-box section .que-text{
+    font-size: 25px;
+}
+
+.quiz-box section .option-list{
+    padding: 20px 0;
+    display: block;
+}
+
+section .option-list .option{
+    background: lightgray;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+section .option-list .option:hover{
+    color: whitesmoke;
+    background: darkgray;
+    border-color: black;
+}
+
+.option-list .option:last-child{
+    margin-bottom: 0px;
+}
+
+.quiz-box footer{
+    height: 60px;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quiz-box footer .total-que span{
+    display: flex;
+    user-select: none;
+}
+
+footer .total-que span p{
+    padding: 0 5px;
+
+}
+
+.total-que span p:first-child{
+    padding-left: 0px;
+}
+
+footer .next-btn{
+    height: 30px;
+    padding: 0 14px;
+    font-size: 14px;
+    border: 1px solid black;
+    color: white;
+    background: gray;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+footer .next-btn:hover{
+    background: black;
+}
+
+.result-box{
+    background: whitesmoke;
+    border: 1px solid black;
+    width: 550px;
+    padding: 25px 30px;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.result-box .complete-text{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.result-box .score-text span{
+    display: flex;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.score-text span p{
+    padding: 0 4px;
+}
+
+.result-box .buttons{
+    display: flex;
+    margin: 20px 0;
+}
+
+.result-box .buttons button{
+    background: darkgray;
+    border: 1px solid black;
+    margin: 0 10px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.buttons button:hover{
+    background: gray;
+}
+
+.compare-results{
+    background: whitesmoke;
+    border: 1px solid black;
+    width: 550px;
+    padding: 25px 30px;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.compare-results .buttons button{
+    background: darkgray;
+    border: 1px solid black;
+    margin: 0 10px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.buttons button:hover{
+    background: gray;
+}
+
