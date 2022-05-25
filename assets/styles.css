@@ -126,6 +126,20 @@ section .option-list .option:hover{
     margin-bottom: 0px;
 }
 
+.option-list .option.correct{
+    background: lightgreen;
+    border-color: darkgreen;
+}
+
+.option-list .option.wrong{
+    background: pink;
+    border-color: red;
+}
+
+.option-list .option.disabled{
+    pointer-events: none;
+}
+
 .quiz-box footer{
     height: 60px;
     width: 100%;
@@ -150,6 +164,7 @@ footer .total-que span p{
 }
 
 footer .next-btn{
+    display: none;
     height: 30px;
     padding: 0 14px;
     font-size: 14px;

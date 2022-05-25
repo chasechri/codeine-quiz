@@ -2,57 +2,57 @@
 let questions = [
     {
         numb: 1,
-        question: "Questions 1?",
-        answers: "Answer 2",
+        question: "What color is an apple?",
+        answers: "Red",
         options: [
-            "Answer 1",
-            "Answer 2",
-            "Answer 3",
-            "Answer 4"
+            "Blue",
+            "Red",
+            "Green",
+            "Black"
         ]
     },
     {
         numb: 2,
-        question: "Questions 2?",
-        answers: "Answer 4",
+        question: "What color is the sky?",
+        answers: "Blue",
         options: [
-            "Answer 1",
-            "Answer 2",
-            "Answer 3",
-            "Answer 4"
+            "Pink",
+            "White",
+            "Purple",
+            "Blue"
         ]
     },
     {
         numb: 3,
-        question: "Questions 3?",
-        answers: "Answer 1",
+        question: "How many hours are in a day?",
+        answers: "24",
         options: [
-            "Answer 1",
-            "Answer 2",
-            "Answer 3",
-            "Answer 4"
+            "12",
+            "24",
+            "7",
+            "365"
         ]
     },
     {
         numb: 4,
-        question: "Questions 4?",
-        answers: "Answer 4",
+        question: "How many days are in a week?",
+        answers: "7",
         options: [
-            "Answer 1",
-            "Answer 2",
-            "Answer 3",
-            "Answer 4"
+            "7",
+            "24",
+            "31",
+            "365"
         ]
     },
     {
         numb: 5,
-        question: "Questions 5?",
-        answers: "Answer 3",
+        question: "What does 5x5 equal?",
+        answers: "25",
         options: [
-            "Answer 1",
-            "Answer 2",
-            "Answer 3",
-            "Answer 4"
+            "1",
+            "5",
+            "25",
+            "55"
         ]
     },
 ];
