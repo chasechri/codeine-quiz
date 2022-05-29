@@ -18,7 +18,9 @@ body{
     transform: translate( -50%, -50%);
 }
 
-.quiz-box.activeQuiz{
+.quiz-box.activeQuiz,
+.result-box.activeResult,
+.compare-results.activeCompare{
     z-index: 5;
     opacity: 1;
     pointer-events: auto;
@@ -184,6 +186,7 @@ footer .next-btn:hover{
     background: whitesmoke;
     border: 1px solid black;
     width: 550px;
+    height: 450px;
     padding: 25px 30px;
     border-radius: 5px;
     display: flex;
@@ -197,14 +200,15 @@ footer .next-btn:hover{
 }
 
 .result-box .complete-text{
-    font-size: 20px;
+    font-size: 35px;
     font-weight: bold;
+    padding-top: 20px;
 }
 
 .result-box .score-text span{
     display: flex;
     margin: 10px 0;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .score-text span p{
@@ -236,6 +240,7 @@ footer .next-btn:hover{
     background: whitesmoke;
     border: 1px solid black;
     width: 550px;
+    height: 450px;
     padding: 25px 30px;
     border-radius: 5px;
     display: flex;
@@ -243,10 +248,12 @@ footer .next-btn:hover{
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
+    pointer-events: none;
     opacity: 0;
     pointer-events: none;
     transform: translate(-50%, -50%) scale(0.9);
 }
+
 
 .compare-results .buttons button{
     background: darkgray;
@@ -264,3 +271,16 @@ footer .next-btn:hover{
     background: gray;
 }
 
+.scores h4{
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+.scores ul{
+    padding-bottom: 30px;
+}
+
+.scores li{
+    padding: 10px;
+    list-style: none;
+}

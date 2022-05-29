@@ -15,8 +15,18 @@ start_btn.onclick = ()=>{
 let que_count = 0;
 let que_numb = 1;
 let counter;
+let userScore = 0;
 
 const next_btn = quiz_box.querySelector(".next-btn");
+const result_box = document.querySelector(".result-box");
+const restart_quiz = document.querySelector(".buttons .restart");
+const quit_quiz = document.querySelector(".buttons .quit");
+const compare_results = document.querySelector(".compare-results");
+const results_btn = document.querySelector(".buttons .compare");
+
+results_btn.onclick = ()=>{
+    compare_results.classList.add("activeCompare");
+}
 
 // when next button clicked
 next_btn.onclick = ()=>{
@@ -25,9 +35,22 @@ next_btn.onclick = ()=>{
         que_numb++;
         showQuestions(que_count);
         queCounter(que_numb);
+        next_btn.style.display = "none";
     }else{
         console.log("Questions completed");
+        let highScores = JSON.parse(localStorage.getItem("currentScore")) || []
+        highScores.push (userScore)
+        highScores.sort (function (a, b) {
+            return b-a;
+        })
+        console.log(highScores)
+        localStorage.setItem("currentScore", JSON.stringify(highScores))
+        showResultBox();
     }
+}
+
+function displayScores() {
+    
 }
 
 // getting Qs and options form array
@@ -51,6 +74,8 @@ function optionSelected(answers){
     let correctAns = questions[que_count].answers;
     let allOptions = option_list.children.length;
     if(userAns == correctAns){
+        userScore += 1;
+        console.log(userScore)
         answers.classList.add("correct");
         console.log("Answer is correct");
     }else{
@@ -70,6 +95,15 @@ function optionSelected(answers){
     next_btn.style.display = "block";
 }
 
+function showResultBox(){
+    result_box.classList.add("activeResult");
+    const scoreText = result_box.querySelector(".score-text");
+    if(userScore < 6){
+        let scoreTag = '<span>You answered <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p> questions correctly...</span>';
+        scoreText.innerHTML = scoreTag;
+    }
+}
+
 function startTimer(time){
     counter = setInterval(timer, 1000);
     function timer(){
@@ -87,3 +121,61 @@ function queCounter(index){
     let totalQuesCountTag = '<span><p>'+ index +'</p>of<p>'+ questions.length +'</p>Questions</span>';
     bottom_ques_counter.innerHTML = totalQuesCountTag;
 }
+
+let questions = [
+    {
+        numb: 1,
+        question: "What color is an apple?",
+        answers: "Red",
+        options: [
+            "Blue",
+            "Red",
+            "Green",
+            "Black"
+        ]
+    },
+    {
+        numb: 2,
+        question: "What color is the sky?",
+        answers: "Blue",
+        options: [
+            "Pink",
+            "White",
+            "Purple",
+            "Blue"
+        ]
+    },
+    {
+        numb: 3,
+        question: "How many hours are in a day?",
+        answers: "24",
+        options: [
+            "12",
+            "24",
+            "7",
+            "365"
+        ]
+    },
+    {
+        numb: 4,
+        question: "How many days are in a week?",
+        answers: "7",
+        options: [
+            "7",
+            "24",
+            "31",
+            "365"
+        ]
+    },
+    {
+        numb: 5,
+        question: "What does 5x5 equal?",
+        answers: "25",
+        options: [
+            "1",
+            "5",
+            "25",
+            "55"
+        ]
+    },
+];
